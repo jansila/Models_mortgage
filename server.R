@@ -139,7 +139,7 @@ shinyServer(function(input, output) {
  #   themortgage<-mortgage(price=input$price, deposit=input$deposit, years=input$years, firstTimer=input$firstTimer,existCustomer=input$existCustomer)
     themortgage<-giveMeMortgage()
     
-    qplot(themortgage$Date,themortgage$balance, main = "Repayment of a loan", ylab="Balance outstanding", xlab="Date")
+    qplot(themortgage$Date,themortgage$balance, main = "Repayment of the mortgage", ylab="Balance outstanding", xlab="Date")
     })
   
   
@@ -157,7 +157,7 @@ shinyServer(function(input, output) {
     test_melt<-melt(tomelt, id.vars = 'themortgage.Date')
     
     p<-ggplot(test_melt, aes(themortgage.Date, value, group=variable, colour=variable)) +geom_line()
-    p+labs(title="Example of mortgage repayment", x="Date", y="£", colour="Legend")
+    p+labs(title="Mortgage repayment", x="Date", y="£", colour="Legend")
 
      })
   
