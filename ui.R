@@ -19,7 +19,7 @@ shinyUI(fluidPage(
       
       checkboxInput("existCustomer", label="Existing customer"),
       helpText("Tick if you are already a company's customer"),
-      
+      br(),
       sliderInput(inputId = "years", label="Mortgage term", min = 1, max = 50, value = 20, step=1), 
       helpText("How long do you wish to be repaying the mortgage for?"),
       
@@ -61,15 +61,15 @@ shinyUI(fluidPage(
                   tags$hr(),
                  tags$h5("Application explained"),
                  HTML("<p>This application quotes a fictional mortgage amortization plan based on an interest rate prediction with underlying <a href='https://en.wikipedia.org/wiki/Markov_chain'>Markov Chain</a> model. The interest rate is <strong>variable</strong> and is recalculated every three months (MPC of the Bank of England).</p>
-                      <p>Every evaluation of the model produces a new result, as it is stochastic without any fixation. Hence, a result for the same set-up will be 'always' different.</p><p> Also, the forecast variance tends to increase for longer contract periods. Hence it can produce rather high interest rates. For that reason, negative rates were eliminated, since interest rate cuts are more probable in the model. </p><p>For a more detailed discussion, please refer to the <a href='https://www.dropbox.com/s/c59yrcfybo9zmo6/project_documentation.pdf?dl=0'> documentation.</a>
+                      <p>Every evaluation of the model produces a new result, as it is stochastic without any fixation. Hence, a result for the same set-up will be 'always' different. Even if the page is only reloaded</p><p> Also, the forecast variance tends to increase for longer contract periods. Hence it can produce rather high interest rates. For that reason, negative rates were eliminated, since interest rate cuts are more probable in the model. </p><p>For a more detailed discussion, please refer to the <a href='https://www.dropbox.com/s/c59yrcfybo9zmo6/project_documentation.pdf?dl=0'> documentation</a>, or <a href='https://github.com/jansila/Models_mortgage'> alternatively here.</a>
                       </p>"),
                  tags$hr(),
                  tags$h5("References"),
-                 HTML("The engine uses R packages <a href='https://cran.rstudio.com/web/packages/markovchain/index.html'> markovchain</a>,graph produced with <a href='http://ggplot2.org'> ggplot2.</a> Powered by <a href='http://www.rstudio.com/shiny/'>Shiny</a> and hosted by <a href='http://www.rstudio.com/'>RStudio</a>. Code hosted at <a href=''>GitHub.</a>"),
+                 HTML("The engine uses R packages <a href='https://cran.rstudio.com/web/packages/markovchain/index.html'> markovchain</a>, graphes are produced with <a href='http://ggplot2.org'> ggplot2.</a> Powered by <a href='http://www.rstudio.com/shiny/'>Shiny</a> and hosted by <a href='http://www.rstudio.com/'>RStudio</a>. Code hosted at <a href='https://github.com/jansila/Models_mortgage'>GitHub.</a>"),
                  tags$hr(),
                  tags$h5("Disclaimer"),
-                 HTML("This is implementation of a project at <a href='https://le.ac.uk'>University of Leicester</a> for module <em>MA7404 Models</em>. Project documentation with detailed description of the underlying method and functionality is available <a href='https://www.dropbox.com/s/c59yrcfybo9zmo6/project_documentation.pdf?dl=0'>here.</a>
-                      <p> Hence, this application is not, and cannot be, associated with any real financial product.</p>"),
+                 HTML("This is implementation of a project at <a href='https://le.ac.uk'>University of Leicester</a> for module <em>MA7404 Models</em>. Project documentation with detailed description of the underlying method and functionality is available <a href='https://www.dropbox.com/s/c59yrcfybo9zmo6/project_documentation.pdf?dl=0'>here</a> and <a href='https://github.com/jansila/Models_mortgage'>here.</a> 
+                      <p> Hence, this <strong>application is not</strong>, and cannot be, <strong>associated with any real financial product.</strong></p>"),
                  tags$h4("Author:"),HTML("<p><a href='https://cz.linkedin.com/in/jansila'>Jan Sila</a></p>
                                          <p> I would like to thank everyone who has kindly supported me while studying at Leicester, namely: Ondrej Brcak, David Koubek and Vaclav Potesil.</p>")
 

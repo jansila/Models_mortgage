@@ -131,7 +131,7 @@ shinyServer(function(input, output) {
     cat(round(sum(themortgage$interest),2))
     cat(" in interest payments,\nwith the monthly average interest of ")
     cat(round(mean(themortgage$Rate),2))
-    cat(" percent per year.")
+    cat(" percent per year. \n\nPlease, do read the Additional information tab to understand the results.")
     
      })
   
